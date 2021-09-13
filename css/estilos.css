@@ -1,0 +1,73 @@
+header{
+    background-color: rgba(58, 124, 38, 0.685);
+    height: 50px;
+}
+#menu{
+    width: 100%;
+    float: right;
+}
+header label{
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    float: right;
+}
+header label:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+}
+#btn-menu{
+    display: none; /*oculta el checkbox*/
+}
+#menu ul{
+    list-style: none; /*Elimina las viñetas*/
+}
+.nav-menu{
+    text-align: right;
+    margin-top: -70%;
+    margin-right: 0%;
+    transition: all 0.5s;
+    background-color: rgba(6, 170, 74, 0.836);
+    width: 20px;
+    height: 50%;
+    float: right; 
+    border-radius: 10px;
+}
+/*si el checkbox esta checkeado aparece el nav-menu*/
+#btn-menu:checked ~ .nav-menu{
+    margin-top: 40px;
+    padding: 10rem;
+}
+#btn-registrar{
+    padding: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(9, 148, 9);
+}
+#btn-registrar:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+}
+#enlace-registro{
+    color: white;
+    font-family: 'Times New Roman';
+    font-size: 22px;
+    text-decoration: none; /*quita el subrayado de los links*/ 
+}
+/*Estilo del Formulario*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#form-registro{
+    display: flex;
+    flex-direction: column;
+}
+fieldset{
+    border: none;
+}
+input{
+    background-color: rgb(223, 213, 213);
+}
