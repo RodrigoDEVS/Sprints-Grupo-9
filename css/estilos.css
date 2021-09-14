@@ -1,32 +1,45 @@
 header{
     background-color: rgba(58, 124, 38, 0.685);
-    height: 50px;
+    height: 80px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-#menu{
-    width: 100%;
-    float: right;
+body{
+    background-color: beige;
 }
-header label{
-    display: block;
-    width: 30px;
-    height: 30px;
+#logo{
+    width: 250px;
     padding: 10px;
-    float: right;
-}
-header label:hover{
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.3);
 }
 #btn-menu{
     display: none; /*oculta el checkbox*/
 }
-#menu ul{
+#ico-menu{
+    width: 60px;
+    height: 60px;
+    float:right;
+    padding: 10px;
+}
+#ico-menu:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+}
+.nav-menu ul{
+    margin: 0;
+    padding: 0;
     list-style: none; /*Elimina las viñetas*/
 }
+.nav-menu li a{
+    display: block;
+    padding: 1px;
+    color: #ffff;
+    text-decoration: none; /*quita el subrayado de los links*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
 .nav-menu{
+    display: none;
     text-align: right;
-    margin-top: -70%;
-    margin-right: 0%;
     transition: all 0.5s;
     background-color: rgba(6, 170, 74, 0.836);
     width: 20px;
@@ -36,7 +49,8 @@ header label:hover{
 }
 /*si el checkbox esta checkeado aparece el nav-menu*/
 #btn-menu:checked ~ .nav-menu{
-    margin-top: 40px;
+    display: block;
+    margin-top: 60px;
     padding: 10rem;
 }
 #btn-registrar{
@@ -51,15 +65,10 @@ header label:hover{
     cursor: pointer;
     background-color: rgba(0,0,0,0.3);
 }
-#enlace-registro{
-    color: white;
-    font-family: 'Times New Roman';
-    font-size: 22px;
-    text-decoration: none; /*quita el subrayado de los links*/ 
-}
-/*Estilo del Formulario*/
 body{
     font-family: Arial, Helvetica, sans-serif;
+
+/*estilos para el formulario*/
 }
 #form-registro{
     display: flex;
@@ -68,6 +77,6 @@ body{
 fieldset{
     border: none;
 }
-input{
+body input{
     background-color: rgb(223, 213, 213);
 }
