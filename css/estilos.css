@@ -1,73 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none; /*quita las lineas de subrayado de los links*/
+    list-style: none; /*quita las viñetas de las listas*/
+    box-sizing: border-box;/*Para que los elementos no se desborden del contenedor*/
+}
 header{
-    background-color: rgba(58, 124, 38, 0.685);
+    background-color: rgb(189, 218, 219);
     height: 80px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
+header p{
+    line-height: 80px;
+}
 body{
-    background-color: beige;
+    background-color: rgb(152, 176, 196);
+}
+nav{
+    background-color: rgb(189, 218, 219);
+    height: 80px;
+    width: 100%;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;/*centra el contenido en el ancho del nav*/
+    margin: 0 5px; /*margen arriba y abajo 0, margen laterales 5px*/
+}
+nav ul li a{
+    background-color: cadetblue;
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a:hover{
+    background-color: rgb(74, 88, 88);
+}
+button:hover{
+    background-color: rgb(74, 88, 88);
+}
+button{
+    border: none;
 }
 #logo{
-    width: 250px;
-    padding: 10px;
+    position: absolute;
+}
+#logo{
+    width: 80px;
+    padding-top: 5px;
 }
 #btn-menu{
-    display: none; /*oculta el checkbox*/
-}
-#ico-menu{
-    width: 60px;
-    height: 60px;
-    float:right;
-    padding: 10px;
-}
-#ico-menu:hover{
+    float: right;
+    padding-top: 10px;
     cursor: pointer;
-    background-color: rgba(0,0,0,0.3);
-}
-.nav-menu ul{
-    margin: 0;
-    padding: 0;
-    list-style: none; /*Elimina las viñetas*/
-}
-.nav-menu li a{
-    display: block;
-    padding: 1px;
-    color: #ffff;
-    text-decoration: none; /*quita el subrayado de los links*/
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-}
-.nav-menu{
+    margin-right: 10px;
     display: none;
-    text-align: right;
-    transition: all 0.5s;
-    background-color: rgba(6, 170, 74, 0.836);
-    width: 15px;
-    height: 30%;
-    float: right; 
-    border-radius: 10px;
 }
-
-/*si el checkbox esta checkeado aparece el nav-menu*/
-#btn-menu:checked ~ .nav-menu{
-    display: block;
-    margin-top: 60px;
-    padding: 10rem;
+#check{
+    display: none;
 }
-#btn-registrar{
-    padding: 0.5rem;
-    width: 10rem;
-    height: 3rem;
-    border: none;
-    border-radius: 10px;
-    background-color: rgb(9, 148, 9);
-    margin-left: auto;
-    margin-right: auto;
-}
-#btn-registrar:hover{
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.3);
+section{
+    background-image: url(/img/Tecnologia_Fondo3.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: calc(100vh - 80px); /*100vh corresponde al tamaño total de la pagina, se le restan los 80px del nav*/
 }
 #btn-registrar2{
     padding: 0.5rem;
@@ -83,9 +85,48 @@ body{
 }
 body{
     font-family: 'Times New Roman', Times, serif;
-
-/*estilos para el formulario*/
 }
+@media (max-width: 952px){
+    
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    #btn-menu{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(152, 176, 196);
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: 1s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover{
+        background-color: rgb(74, 88, 88);
+    }
+    button:hover{
+        background-color: rgb(74, 88, 88);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
+
+}
+/*estilos para el formulario*/
 #form-registro{
     display: flex;
     flex-direction: column;
@@ -94,5 +135,27 @@ fieldset{
     border: none;
 }
 body input{
-    background-color: rgb(223, 213, 213);
+    background-color: rgb(246, 242, 242);
+}
+#title_registro{
+    text-align: center;
+}
+/*Para dar tamaño fijo a los input del formulario (registrar)*/
+#nombre, #telefono, #direccion, #correo, #pass{
+    width: 300px;
+}
+/*Para dejar el botón registrar (registrar2) siempre en el centro*/
+#div-btn-registrar2{
+   text-align: center;
+}
+/*Estilo del botón registrar/formulario*/
+#btn-registrar2{
+    padding: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+    border-style: groove;
+    border-radius: 15px;
+    background-color: rgb(74, 88, 88);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
