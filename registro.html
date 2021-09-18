@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="shortcut icon" href="img/mouse_ico3.png" id="ico-top">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -12,13 +13,12 @@
             <p type="text "align="center" style=" font-family: 'Times New Roman', Times, serif;"> <b>Registro</b></p>
     </header>
     <form action="" id="form-registro">
-
         <label for="" id="Nombre">Nombre</label>
         <input type="text" name="Nombre" id="nombre"><br>
             <div>
-            <legend>Género</legend>
-            <label for="" id="Genero"><input type="radio" name="Genero" value="M" id="M">M</label>
-            <label for="" id="Genero"><input type="radio" name="Genero" value="F" id="F">F</label>
+                <legend>Género</legend>
+                <label for="" id="Genero"><input type="radio" name="Genero" value="M" id="M">M</label>
+                <label for="" id="Genero"><input type="radio" name="Genero" value="F" id="F">F</label>
             </div>
         <br>
         <label for="" id="Telefono">Teléfono</label>
@@ -29,10 +29,11 @@
         <input type="email" name="" id="correo"><br>
         <label for="" id="Pass">Contraseña</label>
         <input type="password" name="" id="pass"><br>
-         </form>
+        <div id="div-btn-registrar2"></div>
+            <input type="submit" id="btn-submit-form" value="Registrar">
+        </div>
+    </form>
          <!--Un div para el botón registrar/formulario-->
-         <div id="div-btn-registrar2">
-            <button type="button" id="btn-registrar2"><b>Registrar</b></a></button>
-         </div>
+         
 </body>
 </html>

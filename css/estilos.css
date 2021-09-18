@@ -4,6 +4,7 @@
     text-decoration: none; /*quita las lineas de subrayado de los links*/
     list-style: none; /*quita las viñetas de las listas*/
     box-sizing: border-box;/*Para que los elementos no se desborden del contenedor*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header{
     background-color: rgb(189, 218, 219);
@@ -16,6 +17,7 @@ header p{
 }
 body{
     background-color: rgb(152, 176, 196);
+    
 }
 nav{
     background-color: rgb(189, 218, 219);
@@ -71,18 +73,6 @@ section{
     background-size: cover;
     height: calc(100vh - 80px); /*100vh corresponde al tamaño total de la pagina, se le restan los 80px del nav*/
 }
-#btn-registrar2{
-    padding: 0.5rem;
-    width: 10rem;
-    height: 3rem;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(58, 124, 38, 0.685);
-}
-#btn-registrar2:hover{
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.3);
-}
 body{
     font-family: 'Times New Roman', Times, serif;
 }
@@ -123,8 +113,6 @@ body{
     #check:checked ~ ul{
         left: 0;
     }
-    
-
 }
 /*estilos para el formulario*/
 #form-registro{
@@ -145,17 +133,21 @@ body input{
     width: 300px;
 }
 /*Para dejar el botón registrar (registrar2) siempre en el centro*/
-#div-btn-registrar2{
+#btn-submit-form{
    text-align: center;
 }
 /*Estilo del botón registrar/formulario*/
-#btn-registrar2{
+#btn-submit-form{
     padding: 0.5rem;
     width: 10rem;
     height: 3rem;
-    border-style: groove;
-    border-radius: 15px;
-    background-color: rgb(74, 88, 88);
+    border: none;
+    border-radius: 10px;    
+    background-color: cadetblue;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#btn-submit-form:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
 }
