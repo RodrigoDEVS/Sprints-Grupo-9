@@ -7,7 +7,7 @@ function checkNombre(){
     }else if (nombre.length < 4 || nombre.length > 30){
      alert("El campo nombre debe ser mayor a 4 y menor que 30");
      return false;
-    }else if (!(/^[A-Z]+$/i.test(nombre))){
+    }else if (!(/[A-Za-z]+/g.test(nombre))){
      alert("Solo es permitido ingresar letras");
      return false;
     }else{
