@@ -118,6 +118,7 @@ body{
 #form-registro{
     display: flex;
     flex-direction: column;
+    padding: 1em;
 }
 fieldset{
     border: none;
@@ -125,11 +126,12 @@ fieldset{
 body input{
     background-color: rgb(246, 242, 242);
 }
+
 #title_registro{
     text-align: center;
 }
 /*Para dar tamaño fijo a los input del formulario (registrar)*/
-#nombre, #telefono, #direccion, #correo, #pass{
+#nombre, #telefono, #direccion, #correo, #contrasena{
     width: 300px;
 }
 /*Para dejar el botón registrar (registrar2) siempre en el centro*/
@@ -146,8 +148,11 @@ body input{
     background-color: cadetblue;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 #btn-submit-form:hover{
     cursor: pointer;
     background-color: rgba(0,0,0,0.3);
+    box-shadow: 0 0.5em 0.5em -0.4em #110338;
+    transform: translateY(-0.25em);
 }

@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="img/mouse_ico3.png" id="ico-top">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="form.js"></script>
-</head>
+    <script src="registro.js"></script>
 <body>
      <header>
             <p type="text "align="center" style=" font-family: 'Times New Roman', Times, serif;"> <b>Registro</b></p>
     </header>
-    <form name="formulario" id="form-registro" onsubmit="return checkNombre(), checkTelefono(), checkDir(), checkCorreo()">
+    <form name="formulario" id="form-registro" onsubmit="return false">
         <label for="" id="Nombre">Nombre</label>
         <input type="text" name="Nombre" id="nombre"><br>
             <div>
@@ -27,12 +27,14 @@
         <label for="" id="Direccion">Dirección</label>
         <input type="text" name="" id="direccion"><br>
         <label for="" id="Correo">Correo</label>
-        <input type="email" name="" id="correo"><br>
+        <input type="email" name="" id="correo" autocomplete="username"><br>
         <label for="" id="Pass">Contraseña</label>
-        <input type="password" name="" id="pass"><br>
+        <input type="password" name="" id="contrasena" autocomplete="current-password"><br>
         <div id="div-btn-registrar2"></div>
-            <input type="submit" id="btn-submit-form" value="Registrar">
+            <input type="submit" id="btn-submit-form" value="Registrar" onclick="checkNombre(), checkTelefono(), checkDir(), checkCorreo(), agregarRegistro()">
         </div>
-    </form>     
+    </form>  
+    <button onclick="ordenarArreglo()">Ordenar Arreglo</button>
+    <button onclick="filtrarCorreo()">Filtrar Correo</button>
 </body>
 </html>
